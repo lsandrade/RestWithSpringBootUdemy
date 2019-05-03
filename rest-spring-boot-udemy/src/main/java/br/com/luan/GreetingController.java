@@ -10,12 +10,12 @@ public class GreetingController {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping(value="/sum/numberOne/numberTwo", method = RequestMethod.GET)
+    @RequestMapping(value="/sum/{numberOne}/{numberTwo}", method = RequestMethod.GET)
     public Double sum(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
         if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
             throw new Exception();
         }
-        return  converToDouble(numberOne) + converToDouble(numberTwo);;
+        return  converToDouble(numberOne) + converToDouble(numberTwo);
     }
 
     private Double converToDouble(String number) {

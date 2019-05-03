@@ -22,6 +22,12 @@ public class CalculatorController {
         return  converToDouble(numberOne) - converToDouble(numberTwo);
     }
 
+    @RequestMapping(value="/mul/{numberOne}/{numberTwo}", method = RequestMethod.GET)
+    public Double mul(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
+        checkNumericValues(numberOne, numberTwo);
+        return  converToDouble(numberOne) * converToDouble(numberTwo);
+    }
+
     private void checkNumericValues(String numberOne, String numberTwo) {
         if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
             throw new UnsupportedOperationException("Please set a numeric value.");

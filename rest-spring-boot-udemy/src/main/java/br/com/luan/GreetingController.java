@@ -13,7 +13,7 @@ public class GreetingController {
     @RequestMapping(value="/sum/{numberOne}/{numberTwo}", method = RequestMethod.GET)
     public Double sum(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
         if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
-            throw new Exception();
+            throw new UnsupportedOperationException("Please set a numeric value.");
         }
         return  converToDouble(numberOne) + converToDouble(numberTwo);
     }

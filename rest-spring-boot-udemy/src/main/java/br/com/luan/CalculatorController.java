@@ -12,18 +12,20 @@ public class CalculatorController {
 
     @RequestMapping(value="/sum/{numberOne}/{numberTwo}", method = RequestMethod.GET)
     public Double sum(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
-        if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
-            throw new UnsupportedOperationException("Please set a numeric value.");
-        }
+        checkNumericValues(numberOne, numberTwo);
         return  converToDouble(numberOne) + converToDouble(numberTwo);
     }
 
     @RequestMapping(value="/sub/{numberOne}/{numberTwo}", method = RequestMethod.GET)
     public Double sub(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
+        checkNumericValues(numberOne, numberTwo);
+        return  converToDouble(numberOne) - converToDouble(numberTwo);
+    }
+
+    private void checkNumericValues(String numberOne, String numberTwo) {
         if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
             throw new UnsupportedOperationException("Please set a numeric value.");
         }
-        return  converToDouble(numberOne) - converToDouble(numberTwo);
     }
 
 

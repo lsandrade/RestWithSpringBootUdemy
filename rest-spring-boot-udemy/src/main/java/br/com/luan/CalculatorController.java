@@ -18,6 +18,15 @@ public class CalculatorController {
         return  converToDouble(numberOne) + converToDouble(numberTwo);
     }
 
+    @RequestMapping(value="/sub/{numberOne}/{numberTwo}", method = RequestMethod.GET)
+    public Double sub(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
+        if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
+            throw new UnsupportedOperationException("Please set a numeric value.");
+        }
+        return  converToDouble(numberOne) - converToDouble(numberTwo);
+    }
+
+
     private Double converToDouble(String number) {
         return (isNumeric(number))? Double.parseDouble(number) : 0D;
     }

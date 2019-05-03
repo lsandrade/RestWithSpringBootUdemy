@@ -19,10 +19,10 @@ public class GreetingController {
     }
 
     private Double converToDouble(String number) {
-        return 1D;
+        return (isNumeric(number))? Double.parseDouble(number) : 0D;
     }
 
     private boolean isNumeric(String number) {
-        return true;
+        return number != null && number.matches("[-+]?\\d*\\.?\\d+");
     }
 }

@@ -300,7 +300,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557244060421" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557244086662" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -329,7 +329,7 @@
       <module name="br.com.luan.rest-spring-boot-udemy.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.luan.*" />
+          <option name="PATTERN" value="br.com.luan.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

@@ -1,4 +1,4 @@
-package br.com.luan;
+package br.com.luan.controllers;
 
 import org.springframework.web.bind.annotation.*;
 

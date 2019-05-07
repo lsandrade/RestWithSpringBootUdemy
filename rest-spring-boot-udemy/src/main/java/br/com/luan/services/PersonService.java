@@ -36,4 +36,9 @@ public class PersonService {
         }
         return persons;
     }
+
+    public Person create(Person person) {
+        person.setId(counter.incrementAndGet());
+        return person;
+    }
 }

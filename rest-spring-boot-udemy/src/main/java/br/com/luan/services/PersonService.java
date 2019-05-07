@@ -39,4 +39,8 @@ public class PersonService {
         person.setId(counter.incrementAndGet());
         return person;
     }
+
+    public Person update(Person person) {
+        return person;
+    }
 }

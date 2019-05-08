@@ -1,6 +1,9 @@
 package br.com.luan.services;
 
+import br.com.exceptions.ResourceNotFoundException;
 import br.com.luan.model.Person;
+import br.com.luan.repository.PersonRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,39 +15,32 @@ public class PersonService {
 
     private final AtomicLong counter = new AtomicLong();
 
-    public Person findById(String id) {
-        return mockPerson(counter.incrementAndGet());
+    @Autowired
+    private PersonRepository repository;
+
+    public Person findById(Long id) {
+        return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No records found fot this id."));
     }
 
     public List<Person> findAll() {
-        List<Person> persons = new ArrayList<>();
-        for(int i=0; i<8; i++) {
-            Person person = mockPerson((long) i+1);
-            persons.add(person);
-        }
-        return persons;
-    }
-
-    private Person mockPerson(Long id) {
-        Person person = new Person();
-        person.setId(id);
-        person.setLastName("Snow");
-        person.setFirstName("Jon");
-        person.setGender("male");
-        person.setAddress("Winterfel");
-        return person;
+        return repository.findAll();
     }
 
     public Person create(Person person) {
-        person.setId(counter.incrementAndGet());
-        return person;
+        return repository.save(person);
     }
 
-    public Person update(Person person) {
-        return person;
+    public Person update(Person personUpdated) {
+        Person entity = findById(personUpdated.getId());
+        entity.setFirstName(personUpdated.getFirstName());
+        entity.setLastName(personUpdated.getLastName());
+        entity.setAddress(personUpdated.getAddress());
+        entity.setGender(personUpdated.getGender());
+        return repository.save(entity);
     }
 
-    public void delete(String id) {
-
+    public void delete(Long id) {
+        Person entity = findById(id);
+        repository.delete(entity);
     }
 }

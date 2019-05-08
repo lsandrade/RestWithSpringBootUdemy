@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13be6c6d-73af-49f3-a165-8e5de77d89f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/luan/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/luan/controllers/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/luan/services/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/luan/services/PersonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -70,15 +70,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/luan/Startup.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -115,7 +106,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/luan/controllers/PersonController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
@@ -131,6 +122,15 @@
                 <element signature="e#1276#1277#0" expanded="true" />
                 <element signature="e#1314#1315#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -260,6 +260,7 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/luan/model/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/luan/services/PersonService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/luan/controllers/PersonController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -319,16 +320,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="luan" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="rest-spring-boot-udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rest-spring-boot-udemy" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="luan" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -336,7 +327,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557251207663" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557325802176" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -396,7 +387,7 @@
     <frame x="62" y="23" width="1557" height="915" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15643564" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15643564" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -405,7 +396,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3730255" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3730255" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -588,6 +579,13 @@
             <element signature="e#1276#1277#0" expanded="true" />
             <element signature="e#1314#1315#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
     </entry>

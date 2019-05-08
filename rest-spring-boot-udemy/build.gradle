@@ -14,6 +14,11 @@ compileJava.options.encoding = 'UTF-8'
 
 sourceCompatibility = 1.8
 
+bootJar {
+    baseName = 'gs-accessing-data-mysql'
+    version =  '0.1.0'
+}
+
 repositories {
     mavenCentral()
 }
@@ -22,5 +27,10 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
     compile("org.springframework.boot:spring-boot-starter-data-rest")
+
+    // Use MySQL Connector-J
+    compile 'mysql:mysql-connector-java'
+
     compile("org.springframework.boot:spring-boot-starter-test")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
 }

@@ -15,22 +15,22 @@ public class PersonController {
     private PersonService service;
 
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/{id}", produces = {"application/json", "application/xml"})
     public Person findById(@PathVariable("id") Long id){
         return service.findById(id);
     }
 
-    @GetMapping
+    @GetMapping(produces = {"application/json", "application/xml"})
     public List<Person> findAll(){
         return service.findAll();
     }
 
-    @PostMapping
+    @PostMapping(consumes = {"application/json", "application/xml"}, produces = {"application/json", "application/xml"})
     public Person create(@RequestBody Person person) {
         return service.create(person);
     }
 
-    @PutMapping
+    @PutMapping(consumes = {"application/json", "application/xml"}, produces = {"application/json", "application/xml"})
     public Person update(@RequestBody Person person) {
         return service.update(person);
     }

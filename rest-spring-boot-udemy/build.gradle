@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id "org.flywaydb.flyway" version "6.0.0-beta"
 }
 
 group 'br.com.luan'
@@ -9,6 +10,7 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: "org.flywaydb.flyway"
 
 compileJava.options.encoding = 'UTF-8'
 
@@ -26,6 +28,8 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
+    compile('org.flywaydb:flyway-core')
+
     compile("org.springframework.boot:spring-boot-starter-data-rest")
 
     // Use MySQL Connector-J
@@ -35,6 +39,14 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
 
     // https://mvnrepository.com/artifact/net.sf.dozer/dozer
-    compile group: 'net.sf.dozer', name: 'dozer', version: '5.4.0'
+    //compile group: 'net.sf.dozer', name: 'dozer', version: '5.4.0'
 
+}
+
+
+flyway {
+    url = 'jdbc:mysql://localhost:3306/'
+    user = 'root'
+    password = 'luan.123'
+    schemas = ['rest_spring_boot_udemy']
 }

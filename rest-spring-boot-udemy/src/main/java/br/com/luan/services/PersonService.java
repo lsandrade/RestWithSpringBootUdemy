@@ -1,12 +1,11 @@
 package br.com.luan.services;
 
 import br.com.exceptions.ResourceNotFoundException;
-import br.com.luan.model.Person;
+import br.com.luan.data.model.Person;
 import br.com.luan.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 

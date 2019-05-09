@@ -33,4 +33,8 @@ dependencies {
 
     compile("org.springframework.boot:spring-boot-starter-test")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    // https://mvnrepository.com/artifact/net.sf.dozer/dozer
+    compile group: 'net.sf.dozer', name: 'dozer', version: '5.4.0'
+
 }

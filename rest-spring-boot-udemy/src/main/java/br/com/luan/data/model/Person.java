@@ -1,4 +1,4 @@
-package br.com.luan.model;
+package br.com.luan.data.model;
 
 import javax.persistence.*;
 import java.io.Serializable;

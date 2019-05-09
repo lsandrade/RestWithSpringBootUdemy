@@ -1,12 +1,10 @@
 package br.com.luan.controllers;
 
-import br.com.luan.model.Person;
+import br.com.luan.data.model.Person;
 import br.com.luan.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import javax.print.attribute.standard.Media;
 import java.util.List;
 
 @RestController

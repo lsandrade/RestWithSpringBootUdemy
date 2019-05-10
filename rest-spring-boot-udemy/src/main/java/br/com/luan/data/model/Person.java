@@ -30,7 +30,7 @@ public class Person implements Serializable {
     @Column(length = 100)
     private String address;
 
-    @JsonIgnore
+    //@JsonIgnore
     @Column(length = 6)
     private String gender;
 
